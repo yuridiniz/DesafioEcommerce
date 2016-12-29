@@ -1,0 +1,67 @@
+﻿<div>
+    <div class="row">
+        <h2>Dados da compra</h2>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert bg-info">
+                    <h4>{{product.Name}}</h4>
+                    <p>
+                        {{product.Description}}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Forma de pagamento</h2>
+
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Nome no cartão</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" ng-model="creditCard.HolderName">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Número do cartão</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" ng-model="creditCard.CreditCardNumber">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Bandeira</label>
+                <div class="col-sm-10">
+                    <select class="form-control" ng-options="item.Id as item.Descricao for item in brands track by item.Id" ng-model="creditCard.CreditCardBrandId"> </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Mês</label>
+                <div class="col-sm-10">
+                    <select class="form-control" ng-options="item.Id as item.Value for item in expMonth track by item.Id" ng-model="creditCard.ExpMonth"></select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Ano</label>
+                <div class="col-sm-10">
+                    <select class="form-control" ng-options="item.Id as item.Value for item in expYear track by item.Id" ng-model="creditCard.ExpYear"></select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">CVV</label>
+                <div class="col-sm-10">
+                    <input class="form-control" ng-model="creditCard.SecurityCode">
+                </div>
+            </div>
+
+            <div class="text-right">
+                <div class=" btn btn-success" ng-click="sendCreditCardInformation()">Comprar:  R$ {{product.Price}}</div>
+            </div>
+
+        </form>
+    </div>
+</div>

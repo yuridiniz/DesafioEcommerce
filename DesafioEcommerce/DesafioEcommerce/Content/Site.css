@@ -1,0 +1,90 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.loading-content {
+    width:100%;
+    height:100%;
+    z-index:10000;
+    background:rgba(0,0,0,0.2);
+    position:fixed;
+    top:0;
+    text-align:center
+}
+
+.loading-content img {
+    width:50px;
+    height:50px;
+    margin-top:200px;
+}
+
+.toggle {
+    -webkit-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -ms-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -o-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.toggle.ng-enter {
+    opacity: 0;
+    
+    transition-duration: 250ms;
+    -webkit-transition-duration: 250ms;
+    -webkit-transition-delay:150ms;
+}
+
+.toggle.ng-enter-active {
+    opacity: 1;
+}
+
+.toggle.ng-leave {
+    position:absolute;
+    opacity: 1;
+    transition-duration: 250ms;
+    -webkit-transition-duration: 250ms;
+}
+
+.toggle.ng-leave-active {
+    position:absolute;
+    opacity: 0;
+}
+
+.toggle.ng-hide-add {
+    transition-duration: 250ms;
+    -webkit-transition-duration: 250ms;
+    opacity: 1;
+}
+
+.toggle.ng-hide-add.ng-hide-add-active {
+    opacity: 0;
+}
+
+.toggle.ng-hide-remove {
+    transition-duration: 250ms;
+    -webkit-transition-duration: 250ms;
+    display: block !important;
+    opacity: 0;
+}
+
+.toggle.ng-hide-remove.ng-hide-remove-active {
+    opacity: 1;
+}
+
+.animation-parent {
+    position:relative;
+}
